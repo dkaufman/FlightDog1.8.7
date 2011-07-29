@@ -1,6 +1,7 @@
 #This file creates a scraper object, given date, origin, and destination
 #The scrape method accesses the Jet Blue website, navigates the reservations search, and writes the resulting flight info to a file
 
+require 'rubygems'
 #require 'nokogiri'
 require 'mechanize'
 #require 'open-uri'
@@ -84,6 +85,6 @@ class JBCollect
 			 output << Time.now.ctime + "," + @date + "," + @fromCity + "," + @toCity + "," + price_array[i] + "," + flights_array[i] + "," + cleaned_departs_array[i] + "," + cleaned_arrives_array[i] + "," + cleaned_seats_array[i] + "\n"
 		  end
 		#Appends data to file
-		  File.open('C:\Sites\scraper\FlightPriceDataCollection\JBRawData17.txt', 'a') {|f| f.write(output) }
+		  File.open('C:\Sites\scraper\FlightPriceDataCollection\JBRawData19.txt', 'a') {|f| f.write(output) }
 	end
 end

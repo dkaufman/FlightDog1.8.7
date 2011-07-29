@@ -32,6 +32,7 @@ class ATCollect
 		skySales["ATAvailabilitySearchInputSearchView$DropDownListMarketMonth1"] = [@month]
 		skySales["ATAvailabilitySearchInputSearchView$DropDownListMarketDateRange1"] = ["2|2"]
 		results = agent.submit(skySales)
+		
 
 		#Click on link for printable results
 		printable_results = results.links.find { |l| l.text == 'Printer-friendly version' }.click
@@ -133,6 +134,6 @@ class ATCollect
 		  end
 		  
 		#Appends data to file
-		  File.open('C:\Sites\scraper\FlightPriceDataCollection\RawDataM.txt', 'a') {|f| f.write(output) }		  
+		  File.open('C:\Sites\scraper\FlightPriceDataCollection\RawDataO.txt', 'a') {|f| f.write(output) }		  
 	end
 end

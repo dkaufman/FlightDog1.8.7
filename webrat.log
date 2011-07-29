@@ -1,0 +1,2 @@
+# Logfile created on 2011-07-16 15:54:12 -0400 by logger.rb/25413
+D, [2011-07-16T15:54:12.193719 #8048] DEBUG -- : REQUESTING PAGE: GET tickets.airtran.com/Search.aspx with {} and HTTP headers {}

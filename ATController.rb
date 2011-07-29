@@ -4,7 +4,7 @@
 
 require 'ATCollect.rb'
 
-
+def atController
 #Get current Date
 currentYear = Time.now.year
 currentMonth = Time.now.month
@@ -72,3 +72,4 @@ for i in [8,13,18,23]
 	ATCollect.new(flightDay.to_s, flightMonth.to_s, "MCO", "MKE").scrape
 end
 puts "Finished Data Collection at " + Time.now.to_s
+end

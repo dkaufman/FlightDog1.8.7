@@ -3,6 +3,7 @@
 
 require 'JBCollect.rb'
 
+def jbController
 #Get current Date
 currentYear = Time.now.year
 currentMonth = Time.now.month
@@ -45,40 +46,174 @@ for i in (6..25)
 	#Creates scraper for each route and calls scrape method
 	#Each route (one-way) requires its own line
 	puts "Scraping BOS for " + formattedFlightDate
+	begin
 	JBCollect.new(formattedFlightDate, "BOS", "BWI").scrape
+	rescue
+		puts "***Failed to collect BOS to BWI for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "BOS", "LGB").scrape
+	rescue
+		puts "***Failed to collect BOS to LGB for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "BOS", "MCO").scrape
+	rescue
+		puts "***Failed to collect BOS to MCO for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "BOS", "FLL").scrape
+	rescue
+		puts "***Failed to collect BOS to FLL for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "BOS", "NYC").scrape
+	rescue
+		puts "***Failed to collect BOS to NYC for " + formattedFlightDate
+	end
+	
+	
 	puts "Scraping BWI for " + formattedFlightDate
+	begin
 	JBCollect.new(formattedFlightDate, "BWI", "BOS").scrape
+	rescue
+		puts "***Failed to collect BWI to BOS for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "BWI", "LGB").scrape
+	rescue
+		puts "***Failed to collect BWI to LGB for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "BWI", "MCO").scrape
+	rescue
+		puts "***Failed to collect BWI to MCO for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "BWI", "FLL").scrape
+	rescue
+		puts "***Failed to collect BWI to FLL for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "BWI", "NYC").scrape
+	rescue
+		puts "***Failed to collect BWI to NYC for " + formattedFlightDate
+	end
+
+
 	puts "Scraping LGB for " + formattedFlightDate
+	begin
 	JBCollect.new(formattedFlightDate, "LGB", "BWI").scrape
+	rescue
+		puts "***Failed to collect LGB to BWI for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "LGB", "BOS").scrape
+	rescue
+		puts "***Failed to collect LGB to BOS for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "LGB", "MCO").scrape
+	rescue
+		puts "***Failed to collect LGB to MCO for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "LGB", "FLL").scrape
+	rescue
+		puts "***Failed to collect LGB to FLL for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "LGB", "NYC").scrape
+	rescue
+		puts "***Failed to collect LGB to NYC for " + formattedFlightDate
+	end
+	
+	
+	
 	puts "Scraping MCO for " + formattedFlightDate
+	begin
 	JBCollect.new(formattedFlightDate, "MCO", "BWI").scrape
+	rescue
+		puts "***Failed to collect MCO to BWI for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "MCO", "LGB").scrape
+	rescue
+		puts "***Failed to collect MCO to LGB for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "MCO", "BOS").scrape
+	rescue
+		puts "***Failed to collect MCO to BOS for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "MCO", "FLL").scrape
+	rescue
+		puts "***Failed to collect MCO to FLL for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "MCO", "NYC").scrape
+	rescue
+		puts "***Failed to collect MCO to NYC for " + formattedFlightDate
+	end
+
+
+
 	puts "Scraping FLL for " + formattedFlightDate
+	begin
 	JBCollect.new(formattedFlightDate, "FLL", "BWI").scrape
+	rescue
+		puts "***Failed to collect FLL to BWI for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "FLL", "LGB").scrape
+	rescue
+		puts "***Failed to collect FLL to LGB for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "FLL", "MCO").scrape
+	rescue
+		puts "***Failed to collect FLL to MCO for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "FLL", "BOS").scrape
+	rescue
+		puts "***Failed to collect FLL to BOS for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "FLL", "NYC").scrape
-		puts "Scraping NYC for " + formattedFlightDate
+	rescue
+		puts "***Failed to collect FLL to NYC for " + formattedFlightDate
+	end
+	
+	
+	
+	puts "Scraping NYC for " + formattedFlightDate
+	begin
 	JBCollect.new(formattedFlightDate, "NYC", "BWI").scrape
+	rescue
+		puts "***Failed to collect NYC to BWI for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "NYC", "LGB").scrape
+	rescue
+		puts "***Failed to collect NYC to LGB for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "NYC", "MCO").scrape
+	rescue
+		puts "***Failed to collect NYC to MCO for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "NYC", "FLL").scrape
+	rescue
+		puts "***Failed to collect NYC to FLL for " + formattedFlightDate
+	end
+	begin
 	JBCollect.new(formattedFlightDate, "NYC", "BOS").scrape
+	rescue
+		puts "***Failed to collect NYC to BOS for " + formattedFlightDate
+	end
 end
 puts "Finished Data Collection at " + Time.now.to_s
+end
